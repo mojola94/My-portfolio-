@@ -1,5 +1,128 @@
 @import "tailwindcss";
 @source "./index.html";
+@source "./portfolio.html";
+
+.project-dialog::backdrop {
+  background: rgb(2 6 23 / 78%);
+  backdrop-filter: blur(4px);
+}
+
+.project-list-link,
+.project-list-item {
+  display: flex;
+  min-height: 3.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 0.875rem;
+  background: rgb(17 24 39 / 0.8);
+  padding: 0.75rem 1rem;
+  color: rgb(243 244 246);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.project-list-link {
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.project-list-link:hover,
+.project-list-link:focus-visible {
+  border-color: rgb(45 212 191 / 0.55);
+  background: rgb(20 184 166 / 0.1);
+  color: rgb(153 246 228);
+}
+
+.project-list-number {
+  color: rgb(45 212 191);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+html[data-theme="light"] body {
+  background: #f8fafc;
+  color: #111827;
+  color-scheme: light;
+}
+
+html[data-theme="light"] header,
+html[data-theme="light"] #primary-navigation {
+  border-color: #e2e8f0;
+  background-color: rgb(255 255 255 / 92%);
+}
+
+html[data-theme="light"] #about,
+html[data-theme="light"] #work {
+  background-color: #f1f5f9;
+}
+
+html[data-theme="light"] [class~="text-white"],
+html[data-theme="light"] [class~="text-gray-100"],
+html[data-theme="light"] [class~="text-gray-200"] {
+  color: #111827;
+}
+
+html[data-theme="light"] [class~="text-gray-300"] {
+  color: #374151;
+}
+
+html[data-theme="light"] [class~="text-gray-400"] {
+  color: #4b5563;
+}
+
+html[data-theme="light"] [class~="text-gray-500"] {
+  color: #64748b;
+}
+
+html[data-theme="light"] [class~="bg-gray-950"],
+html[data-theme="light"] [class~="bg-gray-950/80"],
+html[data-theme="light"] [class~="bg-gray-900"],
+html[data-theme="light"] [class~="bg-gray-900/70"],
+html[data-theme="light"] [class~="bg-gray-900/40"],
+html[data-theme="light"] [class~="bg-gray-900/80"] {
+  background-color: #fff;
+}
+
+html[data-theme="light"] [class*="bg-gradient-to-br"][class*="from-gray-900"] {
+  background-image: none;
+  background-color: #fff;
+}
+
+html[data-theme="light"] [class~="border-white/10"],
+html[data-theme="light"] [class~="border-white/15"] {
+  border-color: #e2e8f0;
+}
+
+html[data-theme="light"] [class~="border-y"] {
+  border-color: #e2e8f0;
+}
+
+html[data-theme="light"] #contact > div > div:first-child {
+  background: #ecfeff;
+}
+
+html[data-theme="light"] .project-dialog {
+  border-color: #e2e8f0;
+  background: #fff;
+  color: #111827;
+}
+
+html[data-theme="light"] .project-list-link,
+html[data-theme="light"] .project-list-item {
+  border-color: #e2e8f0;
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+html[data-theme="light"] .project-list-link:hover,
+html[data-theme="light"] .project-list-link:focus-visible {
+  border-color: #14b8a6;
+  background: #f0fdfa;
+  color: #0f766e;
+}
 
 .portfolio-hero::before {
   position: absolute;

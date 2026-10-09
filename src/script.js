@@ -33,6 +33,42 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
 });
 
+const themeToggle = document.querySelector("#theme-toggle");
+const projectListDialog = document.querySelector("#project-list-dialog");
+
+function setTheme(theme) {
+  const isLight = theme === "light";
+  document.documentElement.dataset.theme = isLight ? "light" : "dark";
+  themeToggle.setAttribute("aria-pressed", String(isLight));
+  themeToggle.setAttribute(
+    "aria-label",
+    isLight ? "Switch to dark mode" : "Switch to light mode",
+  );
+  themeToggle.title = isLight ? "Switch to dark mode" : "Switch to light mode";
+  themeToggle.innerHTML = isLight
+    ? '<i class="fas fa-moon" aria-hidden="true"></i>'
+    : '<i class="fas fa-sun" aria-hidden="true"></i>';
+  localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
+}
+
+setTheme(localStorage.getItem("portfolio-theme") || "dark");
+
+themeToggle.addEventListener("click", () => {
+  setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+});
+
+document.querySelectorAll("[data-project-list-open]").forEach((button) => {
+  button.addEventListener("click", () => projectListDialog.showModal());
+});
+
+document.querySelectorAll("[data-project-list-close]").forEach((button) => {
+  button.addEventListener("click", () => projectListDialog.close());
+});
+
+projectListDialog.addEventListener("click", (event) => {
+  if (event.target === projectListDialog) projectListDialog.close();
+});
+
 const contactForm = document.querySelector("#contact-message-form");
 const contactFormStatus = document.querySelector("#contact-form-status");
 
