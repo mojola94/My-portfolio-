@@ -30,6 +30,15 @@
   <body
     class="min-w-[320px] overflow-x-hidden bg-[#0b1220] font-['Plus_Jakarta_Sans',sans-serif] text-gray-100 antialiased selection:bg-teal-600 selection:text-white"
   >
+    <div
+      id="scroll-progress"
+      class="scroll-progress"
+      role="progressbar"
+      aria-label="Page scroll progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+    ></div>
     <header
       class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-gray-950/80 backdrop-blur-xl"
     >
@@ -399,6 +408,7 @@
               </summary>
               <figure
                 class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+                data-scroll-reveal
               >
                 <img
                   class="aspect-[3/2] w-full object-cover"
@@ -412,7 +422,10 @@
                   Exploring how interfaces connect to the systems behind them.
                 </figcaption>
               </figure>
-              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+              <div
+                class="mt-5 space-y-4 text-sm leading-7 text-gray-300"
+                data-scroll-reveal
+              >
                 <p>
                   My interest in full-stack development grows from a simple
                   question: what does it take to turn a useful idea into a
@@ -530,6 +543,7 @@
               </summary>
               <figure
                 class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+                data-scroll-reveal
               >
                 <img
                   class="aspect-[3/2] w-full object-cover"
@@ -543,7 +557,10 @@
                   Exploring responsible ways to use AI in visual storytelling.
                 </figcaption>
               </figure>
-              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+              <div
+                class="mt-5 space-y-4 text-sm leading-7 text-gray-300"
+                data-scroll-reveal
+              >
                 <p>
                   AI video automation interests me because it brings
                   storytelling, visual communication, and technology into the
@@ -680,6 +697,7 @@
               </summary>
               <figure
                 class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+                data-scroll-reveal
               >
                 <img
                   class="aspect-[3/2] w-full object-cover"
@@ -693,7 +711,10 @@
                   Shaping ideas into clear, engaging stories for people.
                 </figcaption>
               </figure>
-              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+              <div
+                class="mt-5 space-y-4 text-sm leading-7 text-gray-300"
+                data-scroll-reveal
+              >
                 <p>
                   Content writing appeals to me because words can make an idea
                   easier to understand, a service easier to use, and a story
@@ -865,8 +886,9 @@
                   src="./Assets/image/lautech-experience.jpg"
                   alt="Portrait of Success Joseph Titilayo"
                   loading="lazy"
+                  data-scroll-reveal
                 />
-                <p>
+                <p data-scroll-reveal>
                   Studying Information Technology at Ladoke Akintola University
                   of Technology has been an important part of my growth. It has
                   introduced me to ideas about computing, information, and the

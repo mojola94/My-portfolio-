@@ -33,6 +33,63 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
 });
 
+const scrollProgress = document.querySelector("#scroll-progress");
+let scrollProgressFrame = 0;
+
+function updateScrollProgress() {
+  scrollProgressFrame = 0;
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress =
+    scrollableHeight > 0
+      ? Math.min(100, Math.max(0, (window.scrollY / scrollableHeight) * 100))
+      : 0;
+
+  scrollProgress.style.transform = `scaleX(${progress / 100})`;
+  scrollProgress.setAttribute("aria-valuenow", String(Math.round(progress)));
+}
+
+function scheduleScrollProgressUpdate() {
+  if (scrollProgressFrame) return;
+  scrollProgressFrame = window.requestAnimationFrame(updateScrollProgress);
+}
+
+window.addEventListener("scroll", scheduleScrollProgressUpdate, {
+  passive: true,
+});
+window.addEventListener("resize", scheduleScrollProgressUpdate);
+updateScrollProgress();
+
+const reducedMotionPreference = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
+
+if ("IntersectionObserver" in window && !reducedMotionPreference.matches) {
+  const revealTargets = document.querySelectorAll(
+    "main > section, #about .grid.grid-cols-2 > *, #skills .grid > *, #services article, #work .grid > *, #contact form, [data-scroll-reveal]",
+  );
+
+  revealTargets.forEach((element, index) => {
+    element.dataset.scrollReveal = "";
+    element.style.setProperty(
+      "--scroll-reveal-delay",
+      `${(index % 4) * 75}ms`,
+    );
+  });
+
+  document.body.classList.add("scroll-reveal-ready");
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-visible", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.12 },
+  );
+
+  revealTargets.forEach((element) => revealObserver.observe(element));
+}
+
 const themeToggle = document.querySelector("#theme-toggle");
 const projectListDialog = document.querySelector("#project-list-dialog");
 const creativeAreasDialog = document.querySelector("#creative-areas-dialog");
