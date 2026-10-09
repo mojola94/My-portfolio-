@@ -127,10 +127,15 @@
         >
           <div>
             <span
-              class="inline-flex items-center gap-2 rounded-full border border-teal-400/25 bg-teal-500/10 px-3.5 py-2 text-xs font-bold tracking-wide text-teal-300"
+              class="inline-flex min-h-9 items-center gap-2 rounded-full border border-teal-400/25 bg-teal-500/10 px-3.5 py-2 text-xs font-bold tracking-wide text-teal-300"
             >
               <i class="fas fa-code text-teal-300" aria-hidden="true"></i>
-              Frontend Developer &amp; Creative Technologist
+              <span id="hero-role" class="typewriter-text" aria-hidden="true"
+                >Frontend Developer &amp; Creative Technologist</span
+              >
+              <span id="hero-role-announcer" class="sr-only" aria-live="polite"
+                >Frontend Developer and Creative Technologist</span
+              >
             </span>
             <h1
               class="mt-6 text-5xl font-extrabold leading-[1.04] tracking-[-0.075em] text-white sm:text-6xl lg:text-7xl"
@@ -215,7 +220,7 @@
               class="absolute -inset-5 -z-10 rounded-[2rem] bg-gradient-to-br from-teal-500/25 to-emerald-600/15 blur-3xl"
             ></div>
             <div
-              class="absolute inset-0 flex flex-col justify-end overflow-hidden rounded-[2rem] border border-teal-200/20 bg-gray-900 p-7 shadow-2xl shadow-black/40 sm:p-8"
+              class="portfolio-portrait absolute inset-0 flex flex-col justify-end overflow-hidden rounded-[2rem] border border-teal-200/20 bg-gray-900 p-7 shadow-2xl shadow-black/40 sm:p-8"
             >
               <img
                 class="absolute inset-0 z-0 h-full w-full object-cover opacity-75"
@@ -223,8 +228,9 @@
                 alt=""
                 fetchpriority="high"
               />
+              <div class="portrait-color-tint" aria-hidden="true"></div>
               <div
-                class="absolute inset-0 z-0 bg-gradient-to-b from-slate-950/10 via-gray-950/20 to-gray-950"
+                class="absolute inset-0 z-[2] bg-gradient-to-b from-slate-950/10 via-gray-950/20 to-gray-950"
               ></div>
             </div>
           </div>
@@ -949,16 +955,27 @@
       aria-labelledby="project-list-title"
       aria-describedby="project-list-description"
     >
-      <div class="flex items-start justify-between gap-6 border-b border-white/10 p-6 sm:p-8">
+      <div
+        class="flex items-start justify-between gap-6 border-b border-white/10 p-6 sm:p-8"
+      >
         <div>
-          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.18em] text-teal-300">
+          <p
+            class="mb-2 text-xs font-extrabold uppercase tracking-[0.18em] text-teal-300"
+          >
             Selected work
           </p>
-          <h2 id="project-list-title" class="mb-2 text-2xl font-extrabold text-white sm:text-3xl">
+          <h2
+            id="project-list-title"
+            class="mb-2 text-2xl font-extrabold text-white sm:text-3xl"
+          >
             Projects I've worked on
           </h2>
-          <p id="project-list-description" class="mb-0 text-sm leading-6 text-gray-400">
-            Here are a few projects from my growing collection. Choose a live project to visit it.
+          <p
+            id="project-list-description"
+            class="mb-0 text-sm leading-6 text-gray-400"
+          >
+            Here are a few projects from my growing collection. Choose a live
+            project to visit it.
           </p>
         </div>
         <button
@@ -970,26 +987,52 @@
           <i class="fas fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
-      <ol class="grid max-h-[55svh] gap-2 overflow-y-auto p-6 sm:grid-cols-2 sm:p-8">
+      <ol
+        class="grid max-h-[55svh] gap-2 overflow-y-auto p-6 sm:grid-cols-2 sm:p-8"
+      >
         <li>
-          <a class="project-list-link" href="https://positivus-landing-page-vert.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-list-link"
+            href="https://positivus-landing-page-vert.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span class="project-list-number">01</span>
             <span>Positivus Landing Page</span>
-            <i class="fas fa-arrow-up-right-from-square ml-auto text-xs" aria-hidden="true"></i>
+            <i
+              class="fas fa-arrow-up-right-from-square ml-auto text-xs"
+              aria-hidden="true"
+            ></i>
           </a>
         </li>
         <li>
-          <a class="project-list-link" href="https://e-commerce-website-fawn-theta.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-list-link"
+            href="https://e-commerce-website-fawn-theta.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span class="project-list-number">02</span>
             <span>Shop.co</span>
-            <i class="fas fa-arrow-up-right-from-square ml-auto text-xs" aria-hidden="true"></i>
+            <i
+              class="fas fa-arrow-up-right-from-square ml-auto text-xs"
+              aria-hidden="true"
+            ></i>
           </a>
         </li>
         <li>
-          <a class="project-list-link" href="https://bento-page.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-list-link"
+            href="https://bento-page.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span class="project-list-number">03</span>
             <span>Bento Page</span>
-            <i class="fas fa-arrow-up-right-from-square ml-auto text-xs" aria-hidden="true"></i>
+            <i
+              class="fas fa-arrow-up-right-from-square ml-auto text-xs"
+              aria-hidden="true"
+            ></i>
           </a>
         </li>
         <li>
@@ -1017,10 +1060,18 @@
           </div>
         </li>
         <li>
-          <a class="project-list-link" href="https://reenbankm.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-list-link"
+            href="https://reenbankm.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span class="project-list-number">08</span>
             <span>Reen Bank</span>
-            <i class="fas fa-arrow-up-right-from-square ml-auto text-xs" aria-hidden="true"></i>
+            <i
+              class="fas fa-arrow-up-right-from-square ml-auto text-xs"
+              aria-hidden="true"
+            ></i>
           </a>
         </li>
       </ol>

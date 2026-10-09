@@ -69,6 +69,55 @@ projectListDialog.addEventListener("click", (event) => {
   if (event.target === projectListDialog) projectListDialog.close();
 });
 
+const heroRole = document.querySelector("#hero-role");
+const heroRoleAnnouncer = document.querySelector("#hero-role-announcer");
+const roleDescriptions = [
+  "Frontend Developer & Creative Technologist",
+  "Thoughtful problem solver",
+  "Turning ideas into digital experiences",
+  "Creative technologist and storyteller",
+  "Building intuitive web experiences",
+  "Continually learning and innovating",
+];
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (reducedMotion.matches) {
+  heroRole.textContent = roleDescriptions[0];
+} else {
+  let phraseIndex = 0;
+  let characterIndex = 0;
+  let deleting = false;
+
+  function typeNextCharacter() {
+    const phrase = roleDescriptions[phraseIndex];
+
+    if (deleting) {
+      characterIndex -= 1;
+      heroRole.textContent = phrase.slice(0, characterIndex);
+    } else {
+      characterIndex += 1;
+      heroRole.textContent = phrase.slice(0, characterIndex);
+    }
+
+    let delay = deleting ? 32 : 68;
+
+    if (!deleting && characterIndex === phrase.length) {
+      heroRoleAnnouncer.textContent = phrase;
+      deleting = true;
+      delay = 1700;
+    } else if (deleting && characterIndex === 0) {
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % roleDescriptions.length;
+      delay = 350;
+    }
+
+    window.setTimeout(typeNextCharacter, delay);
+  }
+
+  heroRole.textContent = "";
+  window.setTimeout(typeNextCharacter, 400);
+}
+
 const contactForm = document.querySelector("#contact-message-form");
 const contactFormStatus = document.querySelector("#contact-form-status");
 
