@@ -152,7 +152,7 @@
               I build thoughtful, responsive web experiences and bring ideas to
               life through technology, video, and storytelling. I'm an 300-level
               Information Technology student at Ladoke Akintola University of
-              Technology, with 20+ completed software projects.
+              Technology, with 15+ completed software projects.
             </p>
             <div class="mt-7 flex flex-wrap gap-3">
               <a
@@ -274,12 +274,13 @@
                 hands-on frontend development.
               </p>
               <p>
-                I focus on crafting clean, responsive interfaces with
+                I build clean, responsive interfaces with
                 <strong class="text-teal-300"
                   >HTML, Tailwind CSS, and JavaScript</strong
-                >. I'm also a content writer and AI video automation enthusiast,
-                combining technical precision with compelling storytelling as I
-                grow toward becoming a well-rounded full-stack developer.
+                >, and I'm exploring full-stack development, AI video
+                automation, and content writing. I hope to bring these fields
+                together to communicate ideas clearly and create useful
+                solutions that make a positive difference in people's lives.
               </p>
             </div>
             <div class="grid grid-cols-2 gap-3">
@@ -293,14 +294,19 @@
               >
                 <strong
                   class="block bg-gradient-to-r from-teal-300 to-emerald-400 bg-clip-text text-3xl font-extrabold text-transparent"
-                  >20+</strong
+                  >15+</strong
                 >
                 <span class="mt-1 block text-xs leading-5 text-gray-400"
                   >Software projects completed</span
                 >
               </button>
-              <div
-                class="rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-gray-950 p-5"
+              <button
+                class="w-full rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-gray-950 p-5 text-left transition hover:border-teal-400/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
+                type="button"
+                data-creative-areas-open
+                aria-haspopup="dialog"
+                aria-controls="creative-areas-dialog"
+                aria-label="Explore full-stack development, AI video automation, and content writing"
               >
                 <strong
                   class="block bg-gradient-to-r from-teal-300 to-emerald-400 bg-clip-text text-3xl font-extrabold text-transparent"
@@ -309,9 +315,14 @@
                 <span class="mt-1 block text-xs leading-5 text-gray-400"
                   >Creative areas I work across</span
                 >
-              </div>
-              <div
-                class="rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-gray-950 p-5"
+              </button>
+              <button
+                class="w-full rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-gray-950 p-5 text-left transition hover:border-teal-400/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
+                type="button"
+                data-lautech-story-open
+                aria-haspopup="dialog"
+                aria-controls="lautech-story-dialog"
+                aria-label="Read about my experience as an Information Technology student at LAUTECH"
               >
                 <strong
                   class="block bg-gradient-to-r from-teal-300 to-emerald-400 bg-clip-text text-3xl font-extrabold text-transparent"
@@ -320,7 +331,7 @@
                 <span class="mt-1 block text-xs leading-5 text-gray-400"
                   >LAUTECH student</span
                 >
-              </div>
+              </button>
               <div
                 class="rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-gray-950 p-5"
               >
@@ -334,7 +345,632 @@
               </div>
             </div>
           </div>
-        </div>
+          <dialog
+            id="creative-areas-dialog"
+            class="project-dialog border border-white/10 bg-gray-950 p-0 text-gray-100 shadow-2xl backdrop:bg-gray-950/75"
+            aria-labelledby="creative-areas-title"
+            aria-describedby="creative-areas-description"
+          >
+            <div
+              class="flex items-start justify-between gap-6 border-b border-white/10 p-6 sm:p-8"
+            >
+              <div>
+                <p
+                  class="mb-2 text-xs font-extrabold uppercase tracking-[0.18em] text-teal-300"
+                >
+                  Three areas I'm exploring
+                </p>
+                <h2
+                  id="creative-areas-title"
+                  class="mb-2 text-2xl font-extrabold text-white sm:text-3xl"
+                >
+                  Ideas, technology, and helping people
+                </h2>
+                <p
+                  id="creative-areas-description"
+                  class="mb-0 text-sm leading-6 text-gray-400"
+                >
+                  Explore my interests in full-stack development, AI video
+                  automation, and content writing.
+                </p>
+              </div>
+              <button
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-gray-900 text-gray-300 transition hover:border-teal-400/40 hover:text-white"
+                type="button"
+                data-creative-areas-close
+                aria-label="Close creative areas"
+              >
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="min-h-0 flex-1 overflow-y-auto p-4 sm:p-8">
+              <div class="space-y-4">
+            <details
+              class="group rounded-2xl border border-white/10 bg-gray-950/60 p-5 sm:p-7"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white marker:content-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-300"
+              >
+                <span>Full-stack development</span>
+                <i
+                  class="fas fa-chevron-down text-sm text-teal-300 transition-transform group-open:rotate-180"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+              <figure
+                class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+              >
+                <img
+                  class="aspect-[3/2] w-full object-cover"
+                  src="./Assets/image/frontend-development.png"
+                  alt="Illustration of people building a web interface, representing the visible side of application development"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="bg-gray-900/80 px-4 py-3 text-center text-xs text-gray-400"
+                >
+                  Exploring how interfaces connect to the systems behind them.
+                </figcaption>
+              </figure>
+              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+                <p>
+                  My interest in full-stack development grows from a simple
+                  question: what does it take to turn a useful idea into a
+                  complete digital experience? A page in a browser is the part
+                  people see, but behind it there may be data, rules, services,
+                  and decisions that help everything work together. I want to
+                  understand those connections rather than treating a design as
+                  a picture or a collection of disconnected screens. Exploring
+                  the full stack gives me a way to follow an idea from the first
+                  conversation about a problem through the interface and into
+                  the systems that support it. I am interested in the craft of
+                  making each part clear, dependable, and useful to the person
+                  who needs it.
+                </p>
+                <p>
+                  My current foundation is in frontend work with HTML, Tailwind
+                  CSS, and JavaScript. That experience has taught me to pay
+                  attention to structure, responsive layouts, interaction, and
+                  the small details that make a page understandable. I want to
+                  build on that foundation by learning how applications handle
+                  information, how a browser communicates with a server, how
+                  data is organized, and how software responds when something
+                  unexpected happens. These are learning goals, not claims that
+                  I have mastered every part of application development. I
+                  would rather describe my stage honestly: I have a frontend
+                  starting point, a strong curiosity about what lies behind it,
+                  and a commitment to develop the knowledge step by step.
+                </p>
+                <p>
+                  As I explore, I want to learn to think about a feature from
+                  both the user's perspective and the system's perspective.
+                  For example, a form should not only look neat; it should make
+                  clear what information is needed, explain mistakes in a
+                  helpful way, and handle submitted information consistently.
+                  A list of results should not only appear on screen; it should
+                  help someone find the right item, understand what they are
+                  seeing, and continue without confusion. Thinking through
+                  these journeys can help me connect interface decisions to the
+                  logic and data behind them. It also reminds me that technical
+                  choices are valuable when they make an experience more
+                  understandable, not merely because they use a particular
+                  framework or tool.
+                </p>
+                <p>
+                  I am especially interested in the way good structure makes
+                  change easier. A project may start with a small set of needs
+                  and gradually grow as people use it and share feedback. If
+                  its components, data, and responsibilities are understandable,
+                  it is easier to improve without making every change feel
+                  risky. I want to become more thoughtful about naming,
+                  separating responsibilities, testing important behavior, and
+                  documenting decisions in plain language. I also want to
+                  understand how to notice and resolve errors instead of hiding
+                  them. Reliability is not only a technical achievement; it
+                  affects whether a person can depend on a tool when they need
+                  it.
+                </p>
+                <p>
+                  Accessibility and inclusion belong in this exploration from
+                  the beginning. People use different devices, input methods,
+                  reading preferences, and levels of technical confidence. A
+                  complete application should give people a fair chance to
+                  understand its content and complete its important tasks. I
+                  want to keep learning how semantic HTML, keyboard access,
+                  readable contrast, clear labels, and considerate feedback
+                  contribute to that goal. On the server side, I also want to
+                  grow more careful about the handling of information and the
+                  expectations users place in a service. Learning to build
+                  responsibly means asking what information is truly needed,
+                  how it should be protected, and what a user should be told.
+                </p>
+                <p>
+                  I see full-stack development as an ongoing practice of
+                  questions and iteration. I want to make small experiments,
+                  read documentation, compare approaches, and use feedback to
+                  identify what I do not yet understand. When a project
+                  challenges me, I hope to break the problem into manageable
+                  parts, test assumptions, and record what I learn. This
+                  approach feels more valuable than rushing to claim expertise,
+                  because it gives me a realistic path to stronger skills and
+                  better judgment. Over time, I hope to understand how the
+                  pieces fit together well enough to make informed decisions
+                  about both the visible experience and the systems supporting
+                  it.
+                </p>
+                <p>
+                  The purpose behind this interest is to make technology
+                  helpful in everyday life. A well-considered digital service
+                  can make information easier to reach, reduce repeated effort,
+                  or help someone complete a task with more confidence. I want
+                  to listen before building, learn who a solution is for, and
+                  consider whether it genuinely improves the situation it
+                  addresses. I do not expect one application to solve every
+                  problem, and I know good intentions are not a substitute for
+                  testing with real needs. Still, keeping people at the center
+                  gives technical learning a direction. My goal is to grow into
+                  a developer who can collaborate across the stack, explain
+                  decisions clearly, and contribute to useful solutions with
+                  care, integrity, and a willingness to keep improving.
+                </p>
+              </div>
+              <div class="clear-both"></div>
+            </details>
+            <details
+              class="group rounded-2xl border border-white/10 bg-gray-950/60 p-5 sm:p-7"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white marker:content-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-300"
+              >
+                <span>AI video automation</span>
+                <i
+                  class="fas fa-chevron-down text-sm text-teal-300 transition-transform group-open:rotate-180"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+              <figure
+                class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+              >
+                <img
+                  class="aspect-[3/2] w-full object-cover"
+                  src="./Assets/image/ai-video-creation.png"
+                  alt="A person facing an artificial intelligence robot, representing creative exploration with AI tools"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="bg-gray-900/80 px-4 py-3 text-center text-xs text-gray-400"
+                >
+                  Exploring responsible ways to use AI in visual storytelling.
+                </figcaption>
+              </figure>
+              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+                <p>
+                  AI video automation interests me because it brings
+                  storytelling, visual communication, and technology into the
+                  same creative process. A video can make an idea feel vivid,
+                  introduce a topic, or help someone understand information in
+                  a memorable way. At the same time, producing video can involve
+                  many repeated steps: shaping a script, organizing scenes,
+                  preparing visuals, editing, adding captions, and adapting a
+                  finished piece for different places. I am curious about how
+                  thoughtful tools and automation can make parts of that
+                  workflow more manageable while leaving room for human
+                  judgment, originality, and care. My interest is in exploring
+                  the possibilities, learning their limits, and using them to
+                  support communication rather than treating automation as a
+                  substitute for a meaningful idea.
+                </p>
+                <p>
+                  I want to understand a video project as a sequence of choices
+                  rather than a button that instantly creates a finished story.
+                  It begins with a purpose: who should the video reach, what
+                  should they understand, and what would be useful for them to
+                  do next? From there, a creator can shape a concise message,
+                  choose a tone, plan a beginning and ending, and decide which
+                  images or examples will clarify the subject. AI tools may help
+                  with brainstorming, organizing material, generating drafts,
+                  or speeding up repetitive production tasks. The creator still
+                  needs to review each result, check whether it is accurate,
+                  and decide whether the finished work represents the intended
+                  message. That balance between assistance and responsibility
+                  is one of the parts I want to explore carefully.
+                </p>
+                <p>
+                  Automation is most interesting to me when it removes friction
+                  without removing thought. A repeatable workflow might help
+                  organize assets, prepare alternate formats, or make routine
+                  editing steps easier to manage. Those saved moments could
+                  then be spent improving the script, checking details, or
+                  making the story more accessible. But saving time is not the
+                  only measure of success. If automation produces confusing
+                  visuals, inaccurate narration, or a voice that does not fit
+                  the subject, the result can create more work and weaken trust.
+                  I want to learn how to evaluate tools by the quality of the
+                  communication they enable, not by novelty alone. A useful
+                  process should make it easier to create work that serves its
+                  audience.
+                </p>
+                <p>
+                  Clear storytelling matters whether a video is made with
+                  traditional editing, AI assistance, or a combination of both.
+                  Viewers have limited attention, so a creator needs to respect
+                  their time and make the central point easy to follow. I am
+                  interested in how pacing, examples, on-screen text, narration,
+                  and visual contrast can work together instead of competing.
+                  I also want to learn to adapt a message for different
+                  audiences without changing its meaning or making it
+                  misleading. A short social clip, an educational explainer,
+                  and a longer presentation may need different structures, but
+                  each should be honest about what it shows and clear about
+                  what the viewer can take away.
+                </p>
+                <p>
+                  Responsible use is essential to this area. Synthetic images,
+                  generated voices, and automated edits can affect what viewers
+                  believe they are seeing. I want to be thoughtful about
+                  consent, attribution, privacy, factual accuracy, and
+                  transparency whenever these issues apply. If a visual or
+                  voice is generated or significantly altered, the context
+                  should not be designed to deceive people. If a video shares
+                  information that could influence a decision, it deserves
+                  careful checking before it is published. I also want to
+                  remember that people represented in media are not just
+                  material for a workflow. Respectful storytelling means
+                  considering whose perspective is included, who might be
+                  affected, and whether the presentation treats people fairly.
+                </p>
+                <p>
+                  Accessibility is another reason I find this work meaningful.
+                  Captions can help people who are deaf or hard of hearing, and
+                  they can also help viewers watching without sound. Readable
+                  text, strong contrast, sensible pacing, and a clear
+                  description of important visual information can make a video
+                  easier for more people to follow. I want to learn how to
+                  include these considerations as part of production rather
+                  than waiting until the end. Automated captioning or
+                  transcription may be a useful starting point, but names,
+                  technical language, and context can be misrecognized. Human
+                  review remains important. A workflow that is quick but leaves
+                  viewers behind would not meet the standard of usefulness I
+                  hope to pursue.
+                </p>
+                <p>
+                  As I learn, I hope to experiment with small, well-defined
+                  projects and compare how different approaches affect the
+                  finished result. I can ask whether the opening communicates
+                  the subject, whether the visual choices support the message,
+                  and whether a viewer can understand the main point without
+                  unnecessary effort. Feedback from other people can reveal
+                  things I may overlook when I have been close to a project.
+                  I want to be open to revising a script, replacing an image,
+                  or changing a workflow when the result is confusing or
+                  inaccurate. Treating each attempt as an opportunity to learn
+                  will help me build sound creative habits while staying honest
+                  about what I know and what I am still developing.
+                </p>
+                <p>
+                  Ultimately, I want to explore AI video automation as one way
+                  to help people share useful ideas and stories. It might
+                  support a small organization that needs to explain a service,
+                  help a learner revisit a difficult concept, or make important
+                  information more engaging to watch. Those are possibilities
+                  to investigate, not promises that a tool will automatically
+                  solve a communication problem. The audience, purpose, and
+                  quality of the message must come first. By combining
+                  curiosity about technology with respect for viewers, I hope
+                  to develop a creative practice that is efficient without
+                  becoming careless, imaginative without becoming misleading,
+                  and focused on making communication more accessible and
+                  genuinely helpful.
+                </p>
+              </div>
+              <div class="clear-both"></div>
+            </details>
+            <details
+              class="group rounded-2xl border border-white/10 bg-gray-950/60 p-5 sm:p-7"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white marker:content-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-300"
+              >
+                <span>Content writing</span>
+                <i
+                  class="fas fa-chevron-down text-sm text-teal-300 transition-transform group-open:rotate-180"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+              <figure
+                class="float-left mb-4 mr-5 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 sm:w-56"
+              >
+                <img
+                  class="aspect-[3/2] w-full object-cover"
+                  src="./Assets/image/content-writing-story.png"
+                  alt="An open book illuminated by warm light, representing storytelling and writing"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="bg-gray-900/80 px-4 py-3 text-center text-xs text-gray-400"
+                >
+                  Shaping ideas into clear, engaging stories for people.
+                </figcaption>
+              </figure>
+              <div class="mt-5 space-y-4 text-sm leading-7 text-gray-300">
+                <p>
+                  Content writing appeals to me because words can make an idea
+                  easier to understand, a service easier to use, and a story
+                  easier to remember. Good writing is not simply adding more
+                  sentences to a page. It means considering who will read them,
+                  what that person needs, and how to communicate the message
+                  with clarity and respect. I am interested in developing this
+                  skill alongside technology because digital experiences are
+                  made of language as well as layout and code. A heading can
+                  help someone decide whether to continue. A clear instruction
+                  can prevent frustration. A thoughtful explanation can turn
+                  unfamiliar information into something approachable. I want to
+                  explore how deliberate writing can make digital communication
+                  more useful for the people it is meant to serve.
+                </p>
+                <p>
+                  My first step in writing is to understand the purpose rather
+                  than immediately searching for polished phrases. What is the
+                  central idea? Who needs to receive it? What do they already
+                  know, and what might they be wondering? Those questions help
+                  separate essential information from details that can distract
+                  or overwhelm. I want to practice organizing thoughts so that
+                  readers can follow them naturally, whether the format is a
+                  short introduction, a website section, a guide, or a longer
+                  explanation. Clear structure gives a reader a path through the
+                  material. It also helps the writer notice when an argument is
+                  incomplete, a term needs explanation, or a paragraph is
+                  trying to do too many things at once.
+                </p>
+                <p>
+                  Audience awareness should shape the language without making
+                  the writing feel artificial. A message for a beginner may
+                  need to explain terms that specialists take for granted. A
+                  professional reader may appreciate direct organization and
+                  precise details. In either case, I want to avoid assuming
+                  that everyone shares the same background, vocabulary, or
+                  circumstances. Respectful writing does not talk down to its
+                  audience, and it does not use complexity merely to sound
+                  impressive. It makes useful information reachable while
+                  retaining the meaning and nuance the subject requires. I hope
+                  to develop the judgment to choose language that fits both the
+                  topic and the people reading it.
+                </p>
+                <p>
+                  Editing is a central part of that process. A first draft can
+                  help discover what I want to say, but it may not yet be the
+                  clearest or most considerate version. I want to learn to
+                  review my work for structure, unnecessary repetition,
+                  unsupported claims, confusing transitions, and sentences
+                  that sound different from what I intend. Reading aloud can
+                  help me notice awkward rhythm; stepping away and returning
+                  later can help me see gaps I missed. Feedback from another
+                  reader can show where my assumptions are not shared. Rather
+                  than seeing revision as evidence that something went wrong,
+                  I see it as a practical way to make the final communication
+                  stronger and more helpful.
+                </p>
+                <p>
+                  Accuracy and integrity are especially important when writing
+                  informs a decision. I want to be careful about the difference
+                  between a verified fact, a personal opinion, an interpretation,
+                  and an idea that still needs research. If I do not know
+                  something, I should not disguise uncertainty with confident
+                  language. If a claim matters, it deserves checking against
+                  reliable information and appropriate context. I also want to
+                  consider how a sentence could be misunderstood when removed
+                  from the paragraph around it. Clear writing should not make
+                  promises that a service cannot keep or imply evidence that is
+                  not there. Trust grows when communication is honest about
+                  what is known and careful about what is still uncertain.
+                </p>
+                <p>
+                  I am also curious about how writing works together with
+                  design and accessibility. A page can be visually attractive
+                  but difficult to use if its labels are vague, its instructions
+                  are buried, or its important information is presented only
+                  through decoration. Helpful interface text can set
+                  expectations, explain what a button will do, and offer a
+                  constructive next step when something does not work. The
+                  language should remain consistent across a product, so people
+                  do not have to guess whether two different phrases mean the
+                  same thing. I want to keep learning how plain language,
+                  descriptive headings, useful link labels, and inclusive
+                  wording can support people using different devices and
+                  different ways of accessing information.
+                </p>
+                <p>
+                  In a world where AI can generate text quickly, I think a
+                  writer's responsibility becomes even more important. Tools
+                  may help with outlines, alternative phrasing, or early
+                  drafts, but speed does not guarantee truth, relevance, or
+                  empathy. Generated material can sound plausible while
+                  missing context, repeating familiar ideas, or presenting
+                  inaccurate details. I want to treat such tools as assistants
+                  that require direction and review, not as a replacement for
+                  understanding the subject or caring about the audience.
+                  Writers should check facts, protect private information,
+                  respect the origins of material, and make sure the finished
+                  work reflects a real purpose. The final responsibility for
+                  what is communicated belongs with the people who publish it.
+                </p>
+                <p>
+                  My goal is to keep exploring content writing as a way to
+                  connect ideas with people's needs. Clear writing can help
+                  someone learn, find an answer, understand a process, or feel
+                  confident enough to take a next step. It can also give a
+                  project a coherent voice and help people see why its work
+                  matters. I hope to combine writing with my interest in
+                  development and creative technology, so that the words,
+                  visuals, and interactions in a digital experience work
+                  together rather than compete. I know this requires practice:
+                  listening, researching, drafting, editing, and learning from
+                  readers. By staying curious and honest, I want to create
+                  communication that is thoughtful, accessible, and genuinely
+                  useful in people's everyday lives.
+                </p>
+              </div>
+              <div class="clear-both"></div>
+            </details>
+              </div>
+            </div>
+          </dialog>
+          <dialog
+            id="lautech-story-dialog"
+            class="project-dialog border border-white/10 bg-gray-950 p-0 text-gray-100 shadow-2xl backdrop:bg-gray-950/75"
+            aria-labelledby="lautech-story-title"
+            aria-describedby="lautech-story-description"
+          >
+            <div
+              class="flex items-start justify-between gap-6 border-b border-white/10 p-6 sm:p-8"
+            >
+              <div>
+                <p
+                  class="mb-2 text-xs font-extrabold uppercase tracking-[0.18em] text-teal-300"
+                >
+                  My learning journey
+                </p>
+                <h2
+                  id="lautech-story-title"
+                  class="mb-2 text-2xl font-extrabold text-white sm:text-3xl"
+                >
+                  Studying Information Technology at LAUTECH
+                </h2>
+                <p
+                  id="lautech-story-description"
+                  class="mb-0 text-sm leading-6 text-gray-400"
+                >
+                  How a theory-focused academic experience has shaped my
+                  curiosity, independence, and approach to practical learning.
+                </p>
+              </div>
+              <button
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-gray-900 text-gray-300 transition hover:border-teal-400/40 hover:text-white"
+                type="button"
+                data-lautech-story-close
+                aria-label="Close LAUTECH story"
+              >
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+              </button>
+            </div>
+            <article
+              class="min-h-0 flex-1 space-y-5 overflow-y-auto p-6 text-base leading-8 text-gray-300 sm:p-10"
+            >
+              <div
+                class="grid items-center gap-6 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] sm:gap-10"
+              >
+                <img
+                  class="mx-auto h-64 w-48 rounded-2xl border border-white/10 object-cover object-top sm:h-72 sm:w-56"
+                  src="./Assets/image/lautech-experience.jpg"
+                  alt="Portrait of Success Joseph Titilayo"
+                  loading="lazy"
+                />
+                <p>
+                  Studying Information Technology at Ladoke Akintola University
+                  of Technology has been an important part of my growth. It has
+                  introduced me to ideas about computing, information, and the
+                  role technology plays in everyday life. My experience has
+                  also helped me understand how I learn best. Much of my formal
+                  coursework has felt more focused on theory than on sustained
+                  practical work. That can be challenging when I am eager to
+                  build, test, and see an idea become something people can use.
+                  Rather than letting that challenge discourage me, I have used
+                  it to think about the kind of learner and technologist I want
+                  to become.
+                </p>
+              </div>
+              <p>
+                I do not believe theory is without value. Concepts explain why
+                systems behave in particular ways and give me foundations for
+                making thoughtful decisions. Learning principles can help me
+                recognize patterns, ask better questions, and understand more
+                than a set of steps to copy. At the same time, theory becomes
+                clearer to me when I can connect it with practice. Applying an
+                idea in even a small exercise shows me what I understand, what
+                I need to revisit, and how knowledge can be used beyond a page
+                of notes. This has taught me to look for a balance between
+                understanding an idea and putting it to work.
+              </p>
+              <p>
+                The difference between learning a definition and using an idea
+                has shaped how I measure progress. A practical task asks me to
+                plan, make choices, notice mistakes, interpret what happened,
+                and try again. That process is not always comfortable; a first
+                attempt may fail or reveal gaps I did not know I had. I am
+                learning to treat those moments as part of learning rather
+                than proof that I cannot succeed in technology. I can slow
+                down, investigate one problem, and decide on a useful next
+                step. This mindset is helping me value steady improvement and
+                patience more than the expectation that I should know
+                everything immediately.
+              </p>
+              <p>
+                This experience has strengthened my independence. When
+                classroom work does not provide as much hands-on experience as
+                I am seeking, I need to find ways to explore beyond the
+                lecture material. I can identify a topic I do not fully
+                understand, look for reliable explanations, practice with the
+                tools available to me, and give myself room to make mistakes.
+                Breaking a large goal into smaller tasks makes learning feel
+                possible: I can focus on one concept, try it in a small
+                exercise, and reflect on what I learned. Taking initiative in
+                this way has become an important part of my education and has
+                shown me that I can take an active role in my own development.
+              </p>
+              <p>
+                Frontend development has given me a practical way to apply
+                this approach. Working with HTML, Tailwind CSS, and JavaScript
+                lets me turn ideas into interactive experiences and see how
+                structure, design, and behavior connect. Building a page also
+                makes me consider the person using it: can they understand the
+                content, find what they need, and complete a task? I have
+                learned that a useful result needs more than an attractive
+                appearance. It should work across screen sizes, use clear
+                interactions, and be tested with care. Each project helps me
+                practice, uncover something new to learn, and connect my
+                studies with the kind of work I hope to continue.
+              </p>
+              <p>
+                My time as a student has shaped more than my technical
+                interests. It has encouraged patience, humility, and
+                persistence. When a concept takes longer than expected, or a
+                project exposes several gaps, I am learning to respond with
+                curiosity instead of discouragement. I can revisit a
+                foundation, compare explanations, try a smaller example, or
+                ask a more focused question. Asking for clarification is a
+                strength because it helps me understand rather than pretend.
+                Learning alongside other people can also reveal perspectives I
+                might not discover alone. These habits are helping me become
+                more thoughtful when I face unfamiliar challenges.
+              </p>
+              <p>
+                I do not see my university experience only as a limitation. It
+                has clarified the kind of technologist I want to become:
+                someone who respects strong foundations and seeks ways to
+                apply them, learns independently while staying open to
+                guidance, and treats feedback as part of good work.
+                Recognizing that I want more practical experience alongside
+                theory gives me a reason to take initiative, not a reason to
+                stop learning. It has encouraged me to be resourceful and to
+                think actively about how I can grow with the opportunities
+                available to me.
+              </p>
+              <p>
+                I am still developing, and I see that as a positive part of my
+                story. My degree gives me academic foundations, while personal
+                projects let me test ideas and reflection helps me choose what
+                to learn next. I want to strengthen my frontend skills, explore
+                full-stack development, and understand how reliable digital
+                tools can address real needs. LAUTECH has shaped me by giving
+                me a foundation and reminding me to seek practical experience.
+                I am grateful for what I am learning, honest about what I
+                still need, and motivated to grow. I hope to create clear,
+                useful experiences that help people solve problems and access
+                information.
+              </p>
+            </article>
+          </dialog>
       </section>
 
       <section id="skills" class="py-20 sm:py-24">
@@ -487,9 +1123,20 @@
               />
               <span class="text-sm font-semibold text-gray-200">Claude</span>
             </div>
+              <div
+                class="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-gray-900/70 p-4 transition hover:-translate-y-1 hover:border-violet-400/40"
+              >
+                <img
+                  class="h-10 w-10"
+                  src="https://cdn.simpleicons.org/googlegemini/8E75B2"
+                  alt="Google Gemini logo"
+                  loading="lazy"
+                />
+                <span class="text-sm font-semibold text-gray-200">Gemini</span>
+              </div>
 
-            <div
-              class="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-gray-900/70 p-4 transition hover:-translate-y-1 hover:border-sky-400/40"
+              <div
+                class="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-gray-900/70 p-4 transition hover:-translate-y-1 hover:border-sky-400/40"
             >
               <span
                 class="grid h-10 w-10 place-items-center text-3xl text-sky-300"
@@ -951,7 +1598,7 @@
     </main>
     <dialog
       id="project-list-dialog"
-      class="project-dialog w-[min(92vw,42rem)] max-h-[85svh] rounded-3xl border border-white/10 bg-gray-950 p-0 text-gray-100 shadow-2xl backdrop:bg-gray-950/75"
+      class="project-dialog border border-white/10 bg-gray-950 p-0 text-gray-100 shadow-2xl backdrop:bg-gray-950/75"
       aria-labelledby="project-list-title"
       aria-describedby="project-list-description"
     >
@@ -988,7 +1635,7 @@
         </button>
       </div>
       <ol
-        class="grid max-h-[55svh] gap-2 overflow-y-auto p-6 sm:grid-cols-2 sm:p-8"
+        class="grid min-h-0 flex-1 gap-2 overflow-y-auto p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-3"
       >
         <li>
           <a
@@ -1073,6 +1720,60 @@
               aria-hidden="true"
             ></i>
           </a>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">09</span>
+            <span>Blog Preview Card</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">10</span>
+            <span>Chess</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">11</span>
+            <span>Dashstack</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">12</span>
+            <span>Facebook</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">13</span>
+            <span>Multi-Step Form</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">14</span>
+            <span>News Homepage</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">15</span>
+            <span>NFT Preview Card</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">16</span>
+            <span>Social Link Profile</span>
+          </div>
+        </li>
+        <li>
+          <div class="project-list-item">
+            <span class="project-list-number">17</span>
+            <span>Hotel Booking Page</span>
+          </div>
         </li>
       </ol>
       <div class="border-t border-white/10 px-6 py-4 text-right sm:px-8">

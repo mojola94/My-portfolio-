@@ -35,6 +35,8 @@ document.addEventListener("keydown", (event) => {
 
 const themeToggle = document.querySelector("#theme-toggle");
 const projectListDialog = document.querySelector("#project-list-dialog");
+const creativeAreasDialog = document.querySelector("#creative-areas-dialog");
+const lautechStoryDialog = document.querySelector("#lautech-story-dialog");
 
 function setTheme(theme) {
   const isLight = theme === "light";
@@ -67,6 +69,30 @@ document.querySelectorAll("[data-project-list-close]").forEach((button) => {
 
 projectListDialog.addEventListener("click", (event) => {
   if (event.target === projectListDialog) projectListDialog.close();
+});
+
+document.querySelectorAll("[data-creative-areas-open]").forEach((button) => {
+  button.addEventListener("click", () => creativeAreasDialog.showModal());
+});
+
+document.querySelectorAll("[data-creative-areas-close]").forEach((button) => {
+  button.addEventListener("click", () => creativeAreasDialog.close());
+});
+
+creativeAreasDialog.addEventListener("click", (event) => {
+  if (event.target === creativeAreasDialog) creativeAreasDialog.close();
+});
+
+document.querySelectorAll("[data-lautech-story-open]").forEach((button) => {
+  button.addEventListener("click", () => lautechStoryDialog.showModal());
+});
+
+document.querySelectorAll("[data-lautech-story-close]").forEach((button) => {
+  button.addEventListener("click", () => lautechStoryDialog.close());
+});
+
+lautechStoryDialog.addEventListener("click", (event) => {
+  if (event.target === lautechStoryDialog) lautechStoryDialog.close();
 });
 
 const heroRole = document.querySelector("#hero-role");

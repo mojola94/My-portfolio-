@@ -38,6 +38,25 @@
   }
 }
 
+.project-dialog {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  flex-direction: column;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.project-dialog:not([open]) {
+  display: none;
+}
+
+.project-dialog[open] {
+  display: flex;
+}
+
 .project-dialog::backdrop {
   background: rgb(2 6 23 / 78%);
   backdrop-filter: blur(4px);
